@@ -1,0 +1,2254 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><u><span
+style='font-size:20.0pt;line-height:107%'>Un-supervised learning project
+analysis</span></u></b></p>
+
+<p class=MsoNormal><b><u><span style='font-size:16.0pt;line-height:107%'>Problem
+statement</span> :</u></b></p>
+
+<p class=Default><span style='color:windowtext'> </span><b><span
+style='font-family:"Arial",sans-serif;color:windowtext'>AllLife Credit Card
+Customer Segmentation </span></b></p>
+
+<p class=Default><b><span style='font-size:13.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>Background</span></b><span style='font-size:13.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>: </span><span
+style='font-size:11.5pt;font-family:"Arial",sans-serif;color:windowtext'>AllLife
+Bank wants to focus on its credit card customer base in the next financial
+year. They have been advised by their marketing research team, that the
+penetration in the market can be improved. Based on this input, the Marketing
+team proposes to run personalised campaigns to target new customers as well as
+upsell to existing customers. Another insight from the market research was that
+the customers perceive the support services of the back poorly. Based on this,
+the Operations team wants to upgrade the service delivery model, to ensure that
+customers queries are resolved faster. Head of Marketing and Head of Delivery
+both decide to reach out to the Data Science team for help. </span></p>
+
+<p class=Default><b><span style='font-size:13.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>Objective</span></b><span style='font-size:13.5pt;font-family:
+"Arial",sans-serif;color:windowtext'>: </span><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>To identify different segments
+in the existing customer based on their spending patterns as well as past
+interaction with the bank. </span></p>
+
+<p class=Default><b><span style='font-size:13.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>Key Questions: </span></b></p>
+
+<p class=Default style='margin-bottom:3.2pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>1. How many different segments
+of customers are there? </span></p>
+
+<p class=Default style='margin-bottom:3.2pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>2. How are these segments
+different from each other? </span></p>
+
+<p class=Default><span style='font-size:11.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>3. What are your recommendations to the bank on how to better
+market to and service these customers? </span></p>
+
+<p class=Default><b><span style='font-size:13.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>Data Description: </span></b></p>
+
+<p class=Default><span style='font-size:13.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>   </span><span style='font-size:11.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>Data is of various customers of a bank with their credit
+limit, the total number of credit cards the customer has, and different
+channels through which customer has contacted the bank for any queries,
+different channels include visiting the bank, online and through a call centre.
+</span></p>
+
+<p class=Default style='page-break-before:always'><b><span style='font-size:
+13.5pt;font-family:"Arial",sans-serif;color:windowtext'>Steps to follow: </span></b></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>1. Perform univariate analysis
+on the data to better understand the variables at your disposal and to get an
+idea about the no of clusters. Perform EDA, create visualizations to explore
+data. (<b>10 marks</b>) </span></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>2. Properly comment on the
+codes, provide explanations of the steps taken in the notebook and conclude
+your insights from the graphs. (<b>5 marks</b>) </span></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>3. Execute K-means clustering
+use elbow plot and analyse clusters using boxplot (<b>10 marks</b>) </span></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>4. Execute hierarchical clustering
+(with different linkages) with the help of dendrogram and cophenetic coeff.
+Analyse clusters formed using boxplot (<b>15 marks</b>) </span></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>5. Calculate average
+silhouette score for both methods. (<b>5 marks</b>) </span></p>
+
+<p class=Default style='margin-bottom:8.0pt'><span style='font-size:11.5pt;
+font-family:"Arial",sans-serif;color:windowtext'>6. Compare K-means clusters
+with Hierarchical clusters. (<b>5 marks</b>) </span></p>
+
+<p class=Default><span style='font-size:11.5pt;font-family:"Arial",sans-serif;
+color:windowtext'>7. Analysis the clusters formed, tell us how is one cluster
+different from another and answer all the key questions. (<b>10 marks</b>) </span></p>
+
+<p class=MsoNormal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><u><span
+style='font-size:16.0pt;line-height:107%'>Analysis</span></u></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>We have data
+related to customers of a bank. There are five features (columns) we use for
+this.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>The columns
+:</span></p>
+
+<pre style='background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-family:"Calibri",sans-serif;color:black'>                    Avg_Credit_Limit</span></pre>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    Total_Credit_Cards</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    Total_visits_bank</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    Total_visits_online</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    Total_calls_made</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Total records : 660. Small set. This shows
+hierarchical clustering should work better than KMeans.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:justify;text-indent:-.25in;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Conducted univariate
+analysis and provided the comments in the note book.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>There were outliers in
+Avg_Credit_Limi</span><span style='font-size:10.0pt;color:black'>t (39) and </span><span
+style='font-size:10.0pt;color:black'>Total_visits_online(37)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>If we look at the
+distribution plots of individual variables, we can see 4 or 2 clusters. Also, the
+above two </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>columns
+are skewed to right.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Also, there is no
+co-relation between any two variables(columns or features).</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Tried clustering after
+fixing the outliers and without fixing them.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>First listed results
+after fixing outliers.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;text-indent:-.25in;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Second listed results
+without removing outliers and as the scores are better for this, did cluster
+analysis </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:justify;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>and
+recommendations for both hierarchical complete linkage and KMeans clustering.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:.25in;margin-bottom:.0001pt;text-align:center;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><u><span
+style='font-size:14.0pt;color:black'>After fixing outliers</span></u></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:14.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:14.0pt;
+color:black'>KMeans Clustering  </span><span style='font-size:14.0pt;
+font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    Ran KMeans with 4, 3
+clusters as per the elbow method we got 4.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>    Got a score of 50 with three clusters.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>    The box plots below. Mostly
+there is no overlap between clusters. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:45.8pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>But we have few elements in group 1 for Avg_Credit_Limi</span><span
+style='font-size:10.0pt;color:black'>t and </span><span style='font-size:10.0pt;
+color:black'>Total_vi sits_online</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:45.8pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:45.8pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Elbow method graph.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:45.8pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:45.8pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=418 height=281 id="Picture 2"
+src="Analysis_Final_files/image001.png"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>                    </span><span
+style='font-size:10.0pt;color:black'><img width=624 height=436 id="Picture 1"
+src="Analysis_Final_files/image002.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=623 height=65 id="Picture 3"
+src="Analysis_Final_files/image003.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>Hierarchical Clustering  </span><span
+style='font-size:14.0pt;font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Did
+hierarchical clustering by using the following linkages. Ward, Complete,
+Average, Shortest,</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Linkage Ward
+ </span><span style='font-size:10.0pt;line-height:107%;font-family:Wingdings'>à</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Dendogram</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=317 id="Picture 8" src="Analysis_Final_files/image004.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=54 id="Picture 5" src="Analysis_Final_files/image005.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=103 id="Picture 9" src="Analysis_Final_files/image006.jpg"> </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=434 id="Picture 10" src="Analysis_Final_files/image007.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Clusters are
+not ovelapping and distribution seems to be fine. </span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Linkage Average
+ </span><span style='font-size:10.0pt;line-height:107%;font-family:Wingdings'>à</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Dendogram :</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=623 height=237 id="Picture 11" src="Analysis_Final_files/image008.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=48 id="Picture 12" src="Analysis_Final_files/image009.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=102 id="Picture 13" src="Analysis_Final_files/image010.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=429 id="Picture 14" src="Analysis_Final_files/image011.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Clusters are
+not ovelapping and distribution seems to be fine. The cophenet is highest in my
+entire analysis .87, which is close to 1.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Linkage Complete
+</span><span style='font-size:10.0pt;line-height:107%;font-family:Wingdings'>à</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=412 id="Picture 16" src="Analysis_Final_files/image012.jpg"></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'><img
+width=624 height=435 id="Picture 17" src="Analysis_Final_files/image013.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Mostly there is no overlap between
+clusters. But we have few elements in </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>group 0 for Avg_Credit_Limi</span><span
+style='font-size:10.0pt;color:black'>t and </span><span style='font-size:10.0pt;
+color:black'>Total_vi sits_online</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Linkage Shortest </span><span
+style='font-size:10.0pt;font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=623 height=414 id="Picture 18"
+src="Analysis_Final_files/image014.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=624 height=428 id="Picture 19"
+src="Analysis_Final_files/image015.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Mostly there is no overlap between
+clusters. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>But we have few elements in group 1 for
+Avg_Credit_Limi</span><span style='font-size:10.0pt;color:black'>t and </span><span
+style='font-size:10.0pt;color:black'>Total_vi sits_online</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><u><span style='font-size:14.0pt;color:black'>Without
+removing outliers</span></u></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Data set used as it is without modifying
+outliers as we got better scores for both Hierarchical and KMeans.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>Hierarchical with linkage as Complete </span><span
+style='font-size:10.0pt;font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=624 height=372 id="Picture 20"
+src="Analysis_Final_files/image016.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=624 height=446 id="Picture 21"
+src="Analysis_Final_files/image017.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>KMeans </span><span style='font-size:10.0pt;
+font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=624 height=53 id="Picture 22"
+src="Analysis_Final_files/image018.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'><img width=624 height=444 id="Picture 23"
+src="Analysis_Final_files/image019.jpg"></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:center;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><u><span style='font-size:14.0pt;color:black'>Cluster
+comparison between KMeans and Hierachical </span></u></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>Let’s compare Hierarchical Linkage Complete,
+and KMeans clustering. </span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>After analyze their clusters we can
+conclude as follows.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:14.0pt;color:black'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>Even though the number of clusters in them
+one with 2 sets other with </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:14.0pt;color:black'>three sets, the results
+are very similar.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>There are broadly two types of customers.
+Higher average credit limit </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:14.0pt;color:black'>and lower average credit
+limit.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>These guys have a little different usage. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>Higher credit limit guys are using online
+banking more.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>They have more credit cards.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>They visit bank less often and calls made
+were also fewer.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:14.0pt;color:black'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:14.0pt;color:black'>The lower average credit limit guys are
+coming to the bank more,</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>less credit cards.  Calls made are more
+and online usage less.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:14.0pt;color:black'>The above is true in both clustering
+algorithms, only difference is KMeans split the data into three clusters Vs
+hierarchical two clusters.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><b><span
+style='font-size:10.0pt;color:black'>Hierarchical Complete Linkage cluster
+comparison</span></b><span style='font-size:10.0pt;color:black'> </span><span
+style='font-size:10.0pt;font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=565
+ style='width:424.0pt;border-collapse:collapse'>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;padding:
+  0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>Group</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>Feature</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>Minimum</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>Maximum</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Avg_Credit_Limit</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>3000</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>100000</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>84000</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>200000</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_Credit_Cards</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>7</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>5</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>10</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_visits_bank</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>5</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_visits_online</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>10</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>6</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>15</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_calls_made</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>10</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.75pt'>
+  <td width=141 style='width:106.0pt;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:center;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>1</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>0</span></p>
+  </td>
+  <td width=141 style='width:106.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:15.75pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal'><span style='font-size:10.0pt;
+  color:black'>3</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>If you look at the clusters, it looks as follows.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:justify;text-indent:-.25in;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>For Avg_Credit_Limit, Total_Credit_Cards, 
+and Total_visits_online the values used by the clusters </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>are literally
+like lower range for lower cluster and upper range for upper cluster. They are
+almost </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>not
+over lapping.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>Total_visits_bank, Total_calls_made just
+reversed. What I mean by that is for Avg_Credit_Limit </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>lower cluster these are
+high and for higher cluster these are low.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>This can also be explained as follows.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>People with higher credit limit, more
+number of credit cards are accessing online banking more and </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>coming to the bank less
+and number of calls made are also less.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'> People with lower credit limit, less
+number of credit cards are accessing online banking less and </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>coming to the bank more
+and number of calls made are also more.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>The interaction with the call center is
+more for the second group. So may be they are more unhappy.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>Recommendations to the bank :</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Make the online
+banking more available by making it easier and intuitive. Also available on all
+devices. Provide some training to the customers. Add more features to it.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>This way interaction
+will be less, then customers may be more happy.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>Also do a random survey on a selected few
+lower and upper cluster (credit limit) guys and find out if coming to the bank,
+interacting with help desk (calls) or online banking is the issue and </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>fix the issue. I doubt the last one is an
+issue but it may help us to get more insight so that what</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>new features they want in online banking.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>We should look at the lower cluster
+customers and market more credit cards and based on </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>their Credit worthiness update their
+credit limit.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-align:justify;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:10.0pt;color:black'>We should look at the upper credit limit
+guys to see if we can offer some higher rate CDs, low </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>            interest loans etc.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'> KMeans clustering comparison </span><span
+style='font-size:10.0pt;font-family:Wingdings;color:black'>à</span></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:63.75pt;margin-bottom:.0001pt;line-height:normal;background:
+white;vertical-align:baseline;word-break:break-all'><span style='font-size:
+10.0pt;color:black'>&nbsp;</span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=125 style='width:93.5pt;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Group</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Feature</span></p>
+  </td>
+  <td width=125 style='width:93.5pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Minimum</span></p>
+  </td>
+  <td width=125 style='width:93.5pt;border:solid windowtext 1.0pt;border-left:
+  none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Maximum</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Avg_Credit_Limit</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>3000</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>50000</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>5000</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>100000</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>84000</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>200000</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;Total_Credit_Cards</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>7</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>5</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>10</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_visits_bank</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>5</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=127 style='width:95.1pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_visits_online</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>10</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>3</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>6</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>15</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt;color:black'>Total_calls_made</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>10</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>1</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=125 valign=top style='width:93.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>2</span></p>
+  </td>
+  <td width=127 valign=top style='width:95.1pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>0</span></p>
+  </td>
+  <td width=125 valign=top style='width:93.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal'><span style='font-size:10.0pt'>3</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>Even though
+it got three clusters the results are very similar to hierarchical clustering
+results.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%'>We can apply
+the same results …</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>If you look at the clusters, it looks as
+follows.</span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0in;margin-bottom:.0001pt;
+text-align:justify;text-indent:-.25in;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>For Avg_Credit_Limit,
+Total_Credit_Cards,  and Total_visits_online the values used by the clusters </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>are
+literally like lower range for lower clusters and upper range for upper
+cluster. Here they are </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-align:justify;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>overlapping
+little bit.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Total_visits_bank, Total_calls_made
+just reversed to some extent but not fully as hierarchical.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>This can also be
+explained as follows.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>People with higher
+credit limit, more number of credit cards are accessing online banking more and
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>coming to the bank less
+and number of calls made are also less.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;text-indent:-.25in;line-height:normal;background:white;vertical-align:
+baseline;word-break:break-all'><span style='font-size:10.0pt;color:black'>5<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'> People with lower
+credit limit, less number of credit cards are accessing online banking less and
+</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0in;margin-bottom:
+.0001pt;line-height:normal;background:white;vertical-align:baseline;word-break:
+break-all'><span style='font-size:10.0pt;color:black'>coming to the bank more
+and number of calls made are also more.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0in;margin-bottom:.0001pt;
+text-indent:-.25in;line-height:normal;background:white;vertical-align:baseline;
+word-break:break-all'><span style='font-size:10.0pt;color:black'>6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>The interaction with
+the call center is more for the second group. So may be they are more unhappy.</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>Recommendations to the bank :</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.25in;margin-bottom:.0001pt;line-height:normal;background:white;
+vertical-align:baseline;word-break:break-all'><span style='font-size:10.0pt;
+color:black'>&nbsp;</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Make the online
+banking more available by making it easier and intuitive. Also available on all
+devices. Provide some training to the customers. Add more features to it.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>This way interaction
+will be less, then customers may be more happy.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>Also do a random
+survey on a selected few lower and upper cluster (credit limit) guys and find
+out if coming to the bank, interacting with help desk (calls) or online banking
+is the issue and </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>fix the issue. I doubt the last one is an
+issue but it may help us to get more insight so that we </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>can add new features they want in online
+banking. </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>We should look at the
+lower cluster customers and market more credit cards and based on </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;line-height:normal;
+background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>their credit worthiness update their
+credit limit.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.75pt;margin-bottom:.0001pt;text-indent:-.25in;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;color:black'>We should look at the
+upper credit limit guys to see if we can offer some higher rate CDs, </span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0in;margin-right:0in;
+margin-bottom:0in;margin-left:63.8pt;margin-bottom:.0001pt;text-align:justify;
+line-height:normal;background:white;vertical-align:baseline;word-break:break-all'><span
+style='font-size:10.0pt;color:black'>low interest loans etc.</span></p>
+
+</div>
+
+</body>
+
+</html>
